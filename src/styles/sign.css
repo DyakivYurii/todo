@@ -1,0 +1,114 @@
+.main {
+	background-color: #fff;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.main .sign__screen,
+.main .sign__screen {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 200px;
+}
+
+.sign__main,
+.sign__main {
+	margin-bottom: 50px;
+}
+
+.sign__logo {
+	margin: 0;
+	padding-bottom: 15px;
+	font-size: 45px;
+	line-height: 50px;
+	font-weight: 400;
+	letter-spacing: 0.03em;
+	color: #101010;
+}
+
+.sign__logo--bold {
+	font-weight: 700;
+	color: #7762f2;
+}
+
+.sign__desctiption {
+	margin: 0;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	text-align: center;
+	color: #808080;
+}
+
+.sign__input {
+	font-family: inherit;
+	margin-bottom: 20px;
+	padding: 10px 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #202020;
+	border: none;
+	border-bottom: 1px solid #dddddd;
+}
+
+.sign__submit {
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 15px 20px;
+	color: #fff;
+	border: none;
+	border-radius: 35px;
+	cursor: pointer;
+}
+
+.sign-in__submit {
+	background-color: #7762f2;
+	box-shadow: 0 0 15px #8f8ba7;
+}
+
+.sign-in__submit:active {
+	background-color: #7f6af3;
+}
+
+.sign-up__submit {
+	background-color: #f5959d;
+	box-shadow: 0 0 15px #caa8ab;
+}
+
+.sign-in__submit:active {
+	background-color: #fcb2b9;
+}
+
+.sign__text-change-page {
+	margin: 0;
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	color: #808080;
+}
+
+.sign__link-change-page {
+	margin: 0;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #303030;
+}
+
+.sign__error {
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 700;
+	text-align: center;
+	color: #ff7777;
+}

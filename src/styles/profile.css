@@ -1,0 +1,20 @@
+.profile__sign-out {
+	display: block;
+	padding: 30px 17px;
+	font-size: 14px;
+	font-weight: 700;
+	margin-left: auto;
+	color: #bbbbbb;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.profile__sign-out:hover {
+	color: rgb(179, 179, 179);
+}
+
+.profile__content {
+	padding-top: 30px;
+	background-color: #f8f8f8;
+}

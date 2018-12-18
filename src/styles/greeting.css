@@ -1,0 +1,71 @@
+.greeting {
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+	padding-bottom: 40px;
+	background-color: #fff;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.greeting__name {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 15px;
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: 700;
+	text-align: center;
+	color: #e3e3e3;
+}
+
+.greeting__data,
+.greeting__day {
+	margin: 0;
+	padding: 0;
+	font-weight: 700;
+	text-align: center;
+	color: #f5959d;
+}
+
+.greeting__data {
+	font-size: 45px;
+	line-height: 57px;
+}
+
+.greeting__day {
+	padding-bottom: 10px;
+	font-size: 27px;
+	line-height: 32px;
+}
+
+.greeting__mounth {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	line-height: 22px;
+	font-weight: 700;
+	text-align: center;
+	color: #e3e3e3;
+}
+
+/* ******************************************** */
+.profile__sign-out {
+	display: block;
+	padding: 30px 17px;
+	font-size: 14px;
+	font-weight: 700;
+	margin-left: auto;
+	color: #bbbbbb;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.profile__sign-out:hover {
+	color: rgb(179, 179, 179);
+}
+
+.profile__content {
+	padding-top: 30px;
+	background-color: #f8f8f8;
+}

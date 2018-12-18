@@ -1,0 +1,40 @@
+.navigation {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.navigation__list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.navigation__item {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+}
+
+.navigation__button {
+	position: relative;
+	width: 100%;
+	padding: 25px 0;
+	font: inherit;
+	color: rgb(124, 124, 124);
+	font-weight: 700;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.navigation__button:hover {
+	color: rgb(85, 85, 85);
+}
+
+.navigation__button--active {
+	border-bottom: 3px solid #f5959d;
+}

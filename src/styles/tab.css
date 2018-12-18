@@ -1,0 +1,56 @@
+.tab {
+	/* display: flex; */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	padding: 30px;
+	background-color: #fff;
+	box-shadow: 0 0 10px #a1a1a1;
+}
+
+.tab__flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.tab__input {
+	font-family: inherit;
+	margin-bottom: 20px;
+	padding: 10px 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #202020;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #dddddd;
+}
+
+.tab__input--close {
+	display: block;
+	margin-left: auto;
+	height: 40px;
+	width: 40px;
+	color: #fff;
+	background-color: #fc8c95;
+	border: none;
+	cursor: pointer;
+}
+
+.tab__submit {
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 15px 20px;
+	color: #fff;
+	border: none;
+	border-radius: 35px;
+	cursor: pointer;
+	background-color: #f5959d;
+	box-shadow: 0 0 15px #caa8ab;
+}
+
+.tab__submit:active {
+	background-color: #fcb2b9;
+}
