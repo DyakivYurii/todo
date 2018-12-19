@@ -3,12 +3,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link, Redirect } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
-import PropTypes from 'prop-types';
 
 import PATH from '../constant/route';
 import { signIn } from '../actions/authActions';
 
-import AuthError from './AuthError';
+import AuthError from '../components/AuthError';
 
 import '../styles/sign.css';
 

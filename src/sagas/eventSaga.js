@@ -10,7 +10,7 @@ import {
 	updateEventAsync
 } from '../services/eventServer';
 
-import { filteringEvent } from '../actions/APIActions';
+import { filteringEvent } from '../actions/eventActions';
 
 function* watcherEvent() {
 	yield takeLatest(API.GET_ALL_REQUEST, workerGetAllEventsAPI);

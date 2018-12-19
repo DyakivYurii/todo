@@ -11,9 +11,7 @@ const initialState = {
 		clickedId: null,
 		currentElement: null,
 		error: null,
-
-		getStatus: '',
-		addingStatus: ''
+		getStatus: ''
 	},
 	auth: { error: null, action: null },
 	user: {

@@ -12,12 +12,11 @@ import {
 	APIChangeDone,
 	chosingElement,
 	clearChosingElement
-} from '../actions/APIActions';
-
+} from '../actions/eventActions';
 import { changeTab } from '../actions/tabActions';
-import { closeTab, changeTabState } from '../actions/tabForm';
-
+import { closeTab, changeTabState } from '../actions/tabFormActions';
 import { signOut } from '../actions/authActions';
+
 import PATH from '../constant/route';
 
 import NavigationTask from '../components/Todos/NavigationTask';
@@ -36,6 +35,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 class Todos extends React.Component {
 	constructor() {
 		super();
+
 		this.userId = localStorage.getItem('userId');
 	}
 
@@ -49,17 +49,10 @@ class Todos extends React.Component {
 		}
 	}
 
-	handleChange(date) {
-		this.setState({
-			startDate: date
-		});
-		console.log(this.state);
-	}
-
 	render() {
 		const { getStatus } = this.props.events;
 		const { element } = this.props.tab;
-		console.log(this.state);
+
 		return (
 			<Row className="todo">
 				<Col xs="12">
@@ -71,44 +64,44 @@ class Todos extends React.Component {
 					<TodoGreeting />
 				</Col>
 				<Col xs="12" className="todo-navigation navigation">
-					<NavigationTask changeTab={this.props.changeTab} />
+					<NavigationTask changeTab={this.props.changeTab} currentTab={element} />
 				</Col>
 				<Col xs="12" className="todo__content task">
 					{element === 'TASKS' ? (
 						<TaskTab
+							userId={this.props.userId}
+							list={this.props.events.elements}
+							getStatus={getStatus}
+							chosingElement={this.props.chosingElement}
 							changeTabState={this.props.changeTabState}
 							tabFormState={this.props.tabForm.tabState}
-							getStatus={getStatus}
-							list={this.props.events.elements}
-							chosingElement={this.props.chosingElement}
 							APIDelete={this.props.APIDelete}
 							APIChangeDone={this.props.APIChangeDone}
-							userId={this.props.userId}
 						/>
 					) : element === 'COMPLETE' ? (
 						<Completed
-							getStatus={getStatus}
+							userId={this.props.userId}
 							list={this.props.events.doneEvents}
+							getStatus={getStatus}
 							chosingElement={this.props.chosingElement}
 							APIDelete={this.props.APIDelete}
 							APIChangeDone={this.props.APIChangeDone}
-							userId={this.props.userId}
 						/>
 					) : (
 						<p>Something happened wrong</p>
 					)}
 					<TabForm
-						clearChosingElement={this.props.clearChosingElement}
-						closeTab={this.props.closeTab}
-						changeTabState={this.props.changeTabState}
-						tabFormState={this.props.tabForm.tabState}
 						userId={this.props.userId}
+						events={this.props.events}
 						currentElement={this.props.events.currentElement}
 						clickedId={this.props.events.clickedId}
+						clearChosingElement={this.props.clearChosingElement}
+						closeTab={this.props.closeTab}
+						tabFormState={this.props.tabForm.tabState}
+						changeTabState={this.props.changeTabState}
 						APIGetOne={this.props.APIGetOne}
 						APIUpdate={this.props.APIUpdate}
 						APIAdd={this.props.APIAdd}
-						events={this.props.events}
 					/>
 				</Col>
 			</Row>

@@ -56,3 +56,8 @@ export const USER = Object.freeze({
 export const TAB = Object.freeze({
 	CHANGE: 'TAB_CHANGE'
 });
+
+export const TAB_FORM = Object.freeze({
+	CLOSE: 'TAB_FORM_CLOSE',
+	CHANGE: 'TAB_FORM_CHANGE'
+});

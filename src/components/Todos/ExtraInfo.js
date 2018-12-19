@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { APIGetOne } from '../../actions/APIActions';
+import { APIGetOne } from '../../actions/eventActions';
 
 import ItemInfo from './ItemInfo';
 
@@ -14,8 +14,6 @@ class ExtraInfo extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log(`We run gettin get one item `, this.props);
-		console.log(`We have element with id`, this.props.match.params.id);
 		this.props.APIGetOne(this.props.userId, this.props.match.params.id);
 	}
 

@@ -1,9 +1,8 @@
 import { fork } from 'redux-saga/effects';
 
-import watcherEvent from './watcherEvent';
-import watcherAuth from './watcherAuth';
-import watcherUser from './userSaga';
+import authSaga from './authSaga';
+import eventSaga from './eventSaga';
 
 export default function* rootSaga() {
-	yield [fork(watcherEvent), fork(watcherAuth), fork(watcherUser)];
+	yield [fork(authSaga), fork(eventSaga)];
 }

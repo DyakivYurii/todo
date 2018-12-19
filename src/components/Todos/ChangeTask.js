@@ -1,5 +1,4 @@
 import React from 'react';
-
 import DatePicker from 'react-datepicker';
 
 class ChangeTask extends React.PureComponent {
@@ -68,14 +67,6 @@ class ChangeTask extends React.PureComponent {
 				<button
 					type="button"
 					name="close-tab"
-					className="tab__input-close"
-					onClick={this.props.clearChosingElement}
-				>
-					Change
-				</button>
-				<button
-					type="button"
-					name="close-tab"
 					className="tab__input--close"
 					onClick={this.props.closeTab}
 				>
@@ -109,18 +100,32 @@ class ChangeTask extends React.PureComponent {
 					selected={this.state.time}
 					onChange={this.handleChangeTime}
 					name="thisisdatepicker"
+					className="tab__input"
 					showTimeSelect
 					timeFormat="HH:mm"
 					timeIntervals={15}
 					dateFormat="MMMM d, yyyy h:mm aa"
 					timeCaption="time"
 				/>
-				<select name="priority" value={this.state.priority} onChange={this.handleChange()}>
+				<select
+					name="priority"
+					className="tab__input"
+					value={this.state.priority}
+					onChange={this.handleChange()}
+				>
 					<option value="normal">Normal</option>
 					<option value="high">High</option>
 				</select>
 				<button className="tab__submit" type="submit">
 					Change Task
+				</button>
+				<button
+					type="button"
+					name="close-tab"
+					className="tab__blue"
+					onClick={this.props.clearChosingElement}
+				>
+					Go to create event
 				</button>
 			</form>
 		);

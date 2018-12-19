@@ -1,5 +1,4 @@
 import React from 'react';
-
 import DatePicker from 'react-datepicker';
 
 import '../../styles/tab.css';
@@ -44,7 +43,6 @@ class CreateTask extends React.PureComponent {
 	}
 
 	render() {
-		console.log(this.state);
 		return (
 			<React.Fragment>
 				<form className="tab__flex" onSubmit={this.handleSubmit()}>
@@ -84,6 +82,7 @@ class CreateTask extends React.PureComponent {
 						selected={this.state.time}
 						onChange={this.handleChangeTime}
 						name="thisisdatepicker"
+						className="tab__input"
 						showTimeSelect
 						timeFormat="HH:mm"
 						timeIntervals={15}
@@ -92,6 +91,7 @@ class CreateTask extends React.PureComponent {
 					/>
 					<select
 						name="priority"
+						className="tab__input"
 						value={this.state.priority}
 						onChange={this.handleChange()}
 					>

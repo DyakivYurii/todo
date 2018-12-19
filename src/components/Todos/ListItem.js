@@ -23,7 +23,16 @@ class ListItem extends React.Component {
 	}
 
 	render() {
-		const { type, task, chosingElement, APIDelete, userId, APIChangeDone } = this.props;
+		const {
+			type,
+			task,
+			chosingElement,
+			APIDelete,
+			userId,
+			APIChangeDone,
+			changeTabState,
+			tabFormState
+		} = this.props;
 		const timeSnapshot = task.time;
 
 		const dateMounth = months[timeSnapshot.getMonth()];
@@ -54,7 +63,7 @@ class ListItem extends React.Component {
 						)}
 						<span className="task__span" />
 					</label>
-					<div className="task__content" onClick={() => chosingElement(task.id)}>
+					<div className="task__content">
 						<div className="task__info">
 							{hours > 2 ? (
 								<div className="task__time-indicator green" />
@@ -87,7 +96,15 @@ class ListItem extends React.Component {
 						/>
 
 						<div className="task__options">
-							<button type="button" name="change_info" className="task__button">
+							<button
+								type="button"
+								name="change_info"
+								className="task__button"
+								onClick={() => {
+									chosingElement(task.id);
+									changeTabState(tabFormState);
+								}}
+							>
 								Change
 							</button>
 							<Link to={`${PATH.TODOS}/${task.id}`} className="task__button">
@@ -100,7 +117,7 @@ class ListItem extends React.Component {
 		} else {
 			APIDelete(userId, task.id, type);
 		}
-		return <p>you don't have element</p>;
+		return null;
 	}
 }
 

@@ -8,8 +8,8 @@ import store from './store/store';
 
 import AppLayer from './components/AppLayer';
 import Error404 from './components/Error404';
-import SignIn from './components/SignIn';
-import SignUp from './components/SignUp';
+import SignIn from './containers/SignIn';
+import SignUp from './containers/SignUp';
 import PrivateRoute from './components/PrivateRoute';
 import Todos from './containers/Todos';
 import ExtraInfo from './components/Todos/ExtraInfo';

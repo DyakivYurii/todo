@@ -2,10 +2,7 @@ import React from 'react';
 
 import { months, weekDays } from '../../constant/time';
 
-const ItemInfo = ({ currentElement: { done, title, group, content, time, timestamp } }) => {
-	// const timeMonth = months[timestamp.getMonth()];
-	const timeSnapshot = time;
-
+const ItemInfo = ({ currentElement: { title, group, content, time } }) => {
 	const dateMounth = months[time.getMonth()];
 	const dateDayNumber = time.getDate();
 	const dateDay = weekDays[time.getDay()];

@@ -17,10 +17,3 @@ export const addUserExtraInfo = (userId, { email, firstName, secondName }) => {
 		.doc(userId)
 		.set({ email, firstName, secondName });
 };
-
-// export const newCollection = (userId) => {
-// 	return DB.collection('users')
-// 		.doc(userId)
-// 		.collection('tasks')
-// 		.add({ taskName: `this is task` });
-// };

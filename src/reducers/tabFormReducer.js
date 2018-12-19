@@ -1,4 +1,4 @@
-import { TAB_CHANGE_FORM, TAB_CLOSE_FORM } from '../actions/tabForm';
+import { TAB_FORM } from '../actions/types';
 
 const initialState = {
 	tabState: 'CLOSE'
@@ -6,10 +6,10 @@ const initialState = {
 
 const tabFormReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case TAB_CHANGE_FORM: {
+		case TAB_FORM.CHANGE: {
 			return { ...state, tabState: action.state };
 		}
-		case TAB_CLOSE_FORM: {
+		case TAB_FORM.CLOSE: {
 			return { ...state, tabState: action.state };
 		}
 		default: {

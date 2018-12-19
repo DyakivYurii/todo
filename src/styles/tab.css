@@ -38,7 +38,8 @@
 	cursor: pointer;
 }
 
-.tab__submit {
+.tab__submit,
+.tab__blue {
 	margin-top: 20px;
 	font-size: 16px;
 	line-height: 24px;
@@ -47,10 +48,21 @@
 	border: none;
 	border-radius: 35px;
 	cursor: pointer;
-	background-color: #f5959d;
 	box-shadow: 0 0 15px #caa8ab;
+}
+
+.tab__submit {
+	background-color: #f5959d;
 }
 
 .tab__submit:active {
 	background-color: #fcb2b9;
+}
+
+.tab__blue {
+	background-color: #7762f2;
+}
+
+.tab__blue:active {
+	background-color: #7f6af3;
 }

@@ -1,56 +1,49 @@
-// import { EVENT } from './types';
+import { API } from './types';
 
-export const addEvent = () => {};
+// Asynchronus functions ---------------------------------
 
-export const deleteEvent = () => {};
+export const APIGetAll = (userId) => {
+	return { type: API.GET_ALL_REQUEST, userId };
+};
 
-export const changeDoneEvent = () => {};
+export const APIGetOne = (userId, itemId) => {
+	return { type: API.GET_ONE_REQUEST, userId, id: itemId };
+};
 
-// Can I create multiply reduxer for one part in the store
-// Like, I whant to create another event.type only for asynchronys
-// function and working with store?
+export const APIAdd = (userId, event, events) => {
+	return { type: API.ADD_REQUEST, userId, event, events };
+};
 
-// Put all events type for another file like const/types.js
+export const APIDelete = (userId, id, types) => {
+	return { type: API.DELETE_REQUEST, userId, id, types };
+};
 
-// Does it normal to create enumerable for events type?
+export const APIUpdate = (userId, id, updatedParametr) => {
+	return { type: API.UPDATE_REQUEST, userId, id, updatedParametr };
+};
 
-// Where I should put sagas? In the action fyle or create file
-// only for those sagas?
+export const APIChangeDone = (userId, id, status, elements, doneElements) => {
+	return { type: API.CHANGE_STATUS_REQUEST, userId, id, status };
+};
 
-// Yes----normal previous
+// Synchronus functions ---------------------------------
 
-// What about id, that things which we do on the lesson?
-// How can I do that?
+export const chosingElement = (id) => {
+	return { type: API.CLICKED_ELEMENT, id };
+};
 
-// How I can change APIReducer, because I have almost identical and
-// repeated value there for different actions
+export const clearChosingElement = () => {
+	return { type: API.CLICKED_ELEMENT_CLEAR };
+};
 
-// How use normal height of screen
+export const filteringEvent = (events) => {
+	const eventsProces = events.filter((element) => {
+		return element.done === false;
+	});
 
-// Do I need write every type of actions in action? like success and failure?
+	const eventsDone = events.filter((element) => {
+		return element.done === true;
+	});
 
-// What about fork in index file? Do I do write?
-
-// has been deprecated in favor of all
-
-// How understand form with two ability
-
-// --------
-// data picker react
-
-// data-type-picker
-
-// ref -> target this or navigator, than in reudux change
-
-// react-redux povernutu nazad
-
-// initialState = {
-// 	users: [{}, {}],
-// 	ids: [1, 2, 3],
-// 	idsSelectet: [2],
-// 	selectedUser: {},
-// 	selectedId: [1] //Because it is more harder to use id from object than in simple value
-// 	// redux doc
-// };
-
-// midellware
+	return { eventsProces, eventsDone };
+};

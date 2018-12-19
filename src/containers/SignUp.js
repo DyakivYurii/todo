@@ -7,7 +7,7 @@ import { Row, Col } from 'reactstrap';
 import PATH from '../constant/route';
 import { signIn, signOut, signUp, clearSignUpState } from '../actions/authActions';
 
-import AuthError from './AuthError';
+import AuthError from '../components/AuthError';
 
 import '../styles/sign.css';
 
@@ -47,7 +47,6 @@ class SignUp extends React.Component {
 			return <Redirect to={PATH.PROFILE} />;
 		}
 
-		console.log(this.props);
 		return (
 			<Row className="main">
 				<Col xs="12" className="sign__screen">

@@ -9,9 +9,7 @@ class TabForm extends React.Component {
 		this.myRef = React.createRef();
 	}
 
-	handleClick = (refs) => (event) => {
-		console.log(`Somewere click`);
-	};
+	handleClick = (refs) => (event) => {};
 
 	render() {
 		const {
@@ -27,7 +25,6 @@ class TabForm extends React.Component {
 			events,
 			clearChosingElement
 		} = this.props;
-		console.log(this.myRef);
 		return (
 			<React.Fragment>
 				<div ref={this.myRef} onClick={this.handleClick(this.myRef)}>
